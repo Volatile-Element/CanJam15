@@ -50,18 +50,21 @@ public class MazeSpawner : MonoBehaviour
                     {
                         partManager.listStraights.Add(spawnedWall);
                         spawnedWall.GetComponent<Renderer>().material.color = partManager.colorStraights;
+                        spawnedWall.transform.parent = gameObject.transform;
                     }
                     else if (mazeBase[x, y] == 2)
                     {
                         spawnedWall.GetComponent<Renderer>().material.color = partManager.colorCorners;
                         spawnedWall.name = "Corner";
                         partManager.listCorners.Add(spawnedWall);
+                        spawnedWall.transform.parent = gameObject.transform;
                     }
                     else if (mazeBase[x, y] == 3)
                     {
                         spawnedWall.GetComponent<Renderer>().material.color = partManager.colorStraights;
                         spawnedWall.name = "Straight";
                         partManager.listStraights.Add(spawnedWall);
+                        spawnedWall.transform.parent = gameObject.transform;
                     }
                 }
                 else
@@ -72,6 +75,7 @@ public class MazeSpawner : MonoBehaviour
                         spawnedWall.name = "Start Point";
                         hasStart = true;
                         player.transform.position = spawnedWall.transform.position;
+                        spawnedWall.transform.parent = gameObject.transform;
                         continue;
                     }
                     else if (Random.Range(0,1000) > 990 && flickeringLightLimit > 0)
@@ -79,6 +83,7 @@ public class MazeSpawner : MonoBehaviour
                         spawnedWall = (GameObject)Instantiate(flickerLight, new Vector3(x, 1f, y), Quaternion.identity);
                         spawnedWall.name = "Flicker Light";
                         flickeringLightLimit--;
+                        spawnedWall.transform.parent = gameObject.transform;
                         continue;
                     }
                     else if (Random.Range(0, 1000) > 990 && wallPickupLimit > 0)
@@ -86,6 +91,7 @@ public class MazeSpawner : MonoBehaviour
                         spawnedWall = (GameObject)Instantiate(wallPickup, new Vector3(x, 0.5f, y), Quaternion.identity);
                         spawnedWall.name = "Wall Pickup";
                         wallPickupLimit--;
+                        spawnedWall.transform.parent = gameObject.transform;
                         continue;
                     }
                     else if (Random.Range(0, 1000) > 990 && cornerPickupLimit > 0)
@@ -93,6 +99,7 @@ public class MazeSpawner : MonoBehaviour
                         spawnedWall = (GameObject)Instantiate(cornerPickup, new Vector3(x, 0.5f, y), Quaternion.identity);
                         spawnedWall.name = "Corner Pickup";
                         cornerPickupLimit--;
+                        spawnedWall.transform.parent = gameObject.transform;
                         continue;
                     }
                 }

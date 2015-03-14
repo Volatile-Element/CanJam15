@@ -11,6 +11,7 @@ GameObject:
   - 95: {fileID: 9563046}
   - 82: {fileID: 8258274}
   - 114: {fileID: 11485058}
+  - 135: {fileID: 13593062}
   m_Layer: 0
   m_Name: CornerPickupSphere
   m_TagString: Untagged
@@ -112,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: .5, z: -2.21000004}
+  m_LocalPosition: {x: 5.69000006, y: .600000024, z: -.100000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 425420}
@@ -284,14 +285,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7314f9a492d5e84695408b476378b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {fileID: 0}
   partManager: {fileID: 0}
+  colorPicker: {fileID: 0}
 --- !u!135 &13582318
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &13593062
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123372}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

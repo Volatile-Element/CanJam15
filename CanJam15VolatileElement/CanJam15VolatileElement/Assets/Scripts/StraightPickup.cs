@@ -7,6 +7,7 @@ public class StraightPickup : PickupAbstract
 	{
 		Debug.Log ("check");
 		ChangeColor ();
+        gameObject.GetComponentInChildren<Renderer>().material.color = partManager.colorStraights;
 	}
 
 	void OnCollisionEnter(Collision collision)

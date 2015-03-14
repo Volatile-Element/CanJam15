@@ -7,6 +7,7 @@ public class CornerPickup : PickupAbstract
 	{
 		Debug.Log ("check");
 		ChangeColor ();
+        gameObject.GetComponentInChildren<Renderer>().material.color = partManager.colorCorners;
 	}
 
 	void OnCollisionEnter(Collision collision)

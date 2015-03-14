@@ -5,7 +5,7 @@ public abstract class PickupAbstract : MonoBehaviour
 {
 	public PartManager partManager;
 	public ColorPicker colorPicker;
-	void start()
+	void Start()
 	{
 		partManager = FindObjectOfType<PartManager> ();
 		colorPicker = FindObjectOfType<ColorPicker> ();
