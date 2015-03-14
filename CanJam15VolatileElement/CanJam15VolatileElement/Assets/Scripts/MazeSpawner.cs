@@ -13,12 +13,12 @@ public class MazeSpawner : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		int height = 46;
-		int width = 46;
+		int height = 50;
+		int width = 50;
 
 		MazeGenerator mazeGenerator = new MazeGenerator ();
 
-		mazeBase = mazeGenerator.CreateMaze (101, width, height, 10);
+		mazeBase = mazeGenerator.CreateMaze (2077, width, height, 10);
 
 		for (int x = 0; x < width; x++)
 		{

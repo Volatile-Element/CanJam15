@@ -35,7 +35,7 @@ public class PartManager : MonoBehaviour
     {
         if (passedShowing == Showing.corners)
         {
-            ColorChange(colorJunctions, passedCorners);
+            ColorChange(colorCorners, passedObject);
 
             listCorners.Add(passedObject);
         }
