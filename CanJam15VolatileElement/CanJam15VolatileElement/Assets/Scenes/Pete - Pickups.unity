@@ -172,6 +172,10 @@ Prefab:
       propertyPath: partManager
       value: 
       objectReference: {fileID: 1375710380}
+    - target: {fileID: 11466296, guid: 75e35219f1aa4f4418d193018317f7ed, type: 2}
+      propertyPath: colorPicker
+      value: 
+      objectReference: {fileID: 345776490}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75e35219f1aa4f4418d193018317f7ed, type: 2}
   m_IsPrefabParent: 0
@@ -981,6 +985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {fileID: 2100000, guid: 4fdeb4e8895bbce4496f6804ddc84ff8, type: 2}
   partManager: {fileID: 1375710380}
+  colorPicker: {fileID: 345776490}
 --- !u!135 &847746650
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1105,6 +1110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {fileID: 2100000, guid: 4fdeb4e8895bbce4496f6804ddc84ff8, type: 2}
   partManager: {fileID: 1375710380}
+  colorPicker: {fileID: 345776490}
 --- !u!135 &1012405546
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1908,6 +1914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {fileID: 2100000, guid: 4fdeb4e8895bbce4496f6804ddc84ff8, type: 2}
   partManager: {fileID: 1375710380}
+  colorPicker: {fileID: 345776490}
 --- !u!135 &1915879743
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2096,6 +2103,18 @@ Prefab:
     - target: {fileID: 426724, guid: 2033bed096225874ea8ddd4660b227b0, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10824624, guid: 2033bed096225874ea8ddd4660b227b0, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10824624, guid: 2033bed096225874ea8ddd4660b227b0, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10824624, guid: 2033bed096225874ea8ddd4660b227b0, type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2033bed096225874ea8ddd4660b227b0, type: 2}
