@@ -315,6 +315,47 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f63a7c1dd93972d46951cc0d25cd029e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1021862718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1021862719}
+  - 114: {fileID: 1021862720}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1021862719
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021862718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1375710379}
+  m_RootOrder: 2
+--- !u!114 &1021862720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021862718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705ff13a754807e45bba3821818de39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  seed: 0
 --- !u!1 &1116202735
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +419,7 @@ MonoBehaviour:
   endPoint: {fileID: 197822, guid: 9bd673cde2dd8de41aae6c4fa970a36a, type: 2}
   player: {fileID: 518630097}
   partManager: {fileID: 1922756738}
+  gameManager: {fileID: 0}
   wallPickupLimit: 2
   cornerPickupLimit: 2
   flickeringLightLimit: 20
@@ -453,6 +495,7 @@ Transform:
   m_Children:
   - {fileID: 1744033826}
   - {fileID: 1591466716}
+  - {fileID: 1021862719}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &1591466714

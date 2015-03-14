@@ -12,6 +12,7 @@ public class MazeSpawner : MonoBehaviour
     public GameObject player;
 
     public PartManager partManager;
+    public GameManager gameManager;
 
     int[,] mazeBase;
 
@@ -20,6 +21,7 @@ public class MazeSpawner : MonoBehaviour
     public int flickeringLightLimit;
     public int height;
     public int width;
+    int seed;
 
     bool hasStart;
     bool hasEnd;
@@ -27,13 +29,14 @@ public class MazeSpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
 		partManager = FindObjectOfType<PartManager> ();
 
         //int height = 46;
         //int width = 46;
-        //int seed = Random.seed;
-        int seed = 125;
-        Random.seed = seed;
+        //int seed = Random.seed
+
+        seed = gameManager.seed;
         MazeGenerator mazeGenerator = new MazeGenerator();
 
         mazeBase = mazeGenerator.CreateMaze(seed, width, height, 10);
