@@ -20,7 +20,7 @@ public class PartManager : MonoBehaviour
     bool isPersistant = false;
 
 	// Use this for initialization
-	void Start () 
+	void Awake () 
     {
 		cp = GameObject.Find("ColorPicker").GetComponent<ColorPicker>();
 		
@@ -35,31 +35,31 @@ public class PartManager : MonoBehaviour
     {
         if (passedShowing == Showing.corners)
         {
-            ColorChange(colorCorners, passedObject);
+            //ColorChange(colorCorners, passedObject);
 
             listCorners.Add(passedObject);
         }
         else if (passedShowing == Showing.straights)
         {
-            ColorChange(colorStraights, passedObject);
+           // ColorChange(colorStraights, passedObject);
 
             listStraights.Add(passedObject);
         }
         else if (passedShowing == Showing.doors)
         {
-            ColorChange(colorDoors, passedObject);
+            //ColorChange(colorDoors, passedObject);
 
             listDoors.Add(passedObject);
         }
         else if (passedShowing == Showing.junctions)
         {
-            ColorChange(colorJunctions, passedObject);
+            //ColorChange(colorJunctions, passedObject);
 
             listJunctions.Add(passedObject);
         }
         else if (passedShowing == Showing.traps)
         {
-            ColorChange(colorTraps, passedObject);
+            //ColorChange(colorTraps, passedObject);
 
             listTraps.Add(passedObject);
         }
