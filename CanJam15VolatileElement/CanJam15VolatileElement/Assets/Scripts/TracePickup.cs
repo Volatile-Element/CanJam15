@@ -13,21 +13,14 @@ public class TracePickup :PickupAbstract
 			//ChangeColor (testColor);
 			//destroyObject ();
 			play = collision.collider.gameObject;
-			
+			collision.collider.GetComponent<TrailRenderer>().material.color = testColor;
 			collision.collider.GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+			Destroy(gameObject);
 		}
 	}
-
 	public override void Triggers()
 	{
-
+		//Necessary override
 	}
 
-	void Update()
-	{
-		if (Input.GetKeyDown("d"))
-		{
-			play.GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
-		}
-	}
 }

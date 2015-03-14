@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class PartManager : MonoBehaviour 
 {
 
-    ColorPicker cp = GameObject.Find("ColorPicker").GetComponent<ColorPicker>();
+	ColorPicker cp;
 
     public Color colorCorners, colorStraights, colorDoors, colorJunctions;
 
@@ -22,6 +22,7 @@ public class PartManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
+		cp = GameObject.Find("ColorPicker").GetComponent<ColorPicker>();
         colorCorners = cp.Picker();
         colorStraights = cp.Picker();
         colorDoors = cp.Picker();

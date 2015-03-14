@@ -25,7 +25,7 @@ public class StraightPickup : PickupAbstract
 
 	void Update()
 	{
-		if (Input.GetKeyDown("d"))
+		if (Input.GetKeyDown("r"))
 		{
 			play.GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
 		}
