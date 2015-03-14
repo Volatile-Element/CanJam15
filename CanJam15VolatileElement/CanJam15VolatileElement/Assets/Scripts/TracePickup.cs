@@ -3,17 +3,21 @@ using System.Collections;
 
 public class TracePickup :PickupAbstract
 {
-	GameObject play;
+	GameObject play;	
+
+
+	void Start()
+	{
+		ChangeColor ();
+	}
 
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.collider.name == "Player") 
 		{
-			Color testColor = new Color (100, 100, 0, 0f);
-			//ChangeColor (testColor);
-			//destroyObject ();
+			Color randColor = colorPicker.Picker();
 			play = collision.collider.gameObject;
-			collision.collider.GetComponent<TrailRenderer>().material.color = testColor;
+			collision.collider.GetComponent<TrailRenderer>().material.color = randColor;
 			collision.collider.GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
 			Destroy(gameObject);
 		}
