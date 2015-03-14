@@ -63,7 +63,7 @@ public class PartManager : MonoBehaviour
         }
     }
 
-    void NewSurface(Showing passedShow)
+    public void NewSurface(Showing passedShow)
     {
         if (passedShow == Showing.corners)
         {
