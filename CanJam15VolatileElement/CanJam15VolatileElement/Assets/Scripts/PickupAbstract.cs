@@ -3,7 +3,6 @@ using System.Collections;
 
 public abstract class PickupAbstract : MonoBehaviour 
 {
-	public Material color;
 	public PartManager partManager;
 	public ColorPicker colorPicker;
 	void start()

@@ -983,7 +983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001bb075f22d3fb4e928d22e1e542eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {fileID: 2100000, guid: 4fdeb4e8895bbce4496f6804ddc84ff8, type: 2}
   partManager: {fileID: 1375710380}
   colorPicker: {fileID: 345776490}
 --- !u!135 &847746650
@@ -1108,7 +1107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1007250a66bc664e87437e94ba447e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {fileID: 2100000, guid: 4fdeb4e8895bbce4496f6804ddc84ff8, type: 2}
   partManager: {fileID: 1375710380}
   colorPicker: {fileID: 345776490}
 --- !u!135 &1012405546
@@ -1912,7 +1910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7314f9a492d5e84695408b476378b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {fileID: 2100000, guid: 4fdeb4e8895bbce4496f6804ddc84ff8, type: 2}
   partManager: {fileID: 1375710380}
   colorPicker: {fileID: 345776490}
 --- !u!135 &1915879743
@@ -2102,7 +2099,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426724, guid: 2033bed096225874ea8ddd4660b227b0, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 10824624, guid: 2033bed096225874ea8ddd4660b227b0, type: 2}
       propertyPath: m_Color.r

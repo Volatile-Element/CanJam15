@@ -4,15 +4,11 @@ using System.Collections;
 public class TracePickup :PickupAbstract
 {
 	GameObject play;	
-	public ColorPicker colo;
 
 
 	void Start()
 	{
-		colo = FindObjectOfType<ColorPicker> ();
-		Color randColor = colo.Picker ();
-		gameObject.GetComponentInChildren<Light> ().color = randColor;
-		Debug.Log (randColor.ToString ());
+		ChangeColor ();
 	}
 
 	void OnCollisionEnter(Collision collision)
