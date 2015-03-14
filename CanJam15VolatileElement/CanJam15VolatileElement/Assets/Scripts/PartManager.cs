@@ -5,28 +5,41 @@ using System.Collections.Generic;
 public class PartManager : MonoBehaviour 
 {
 
+<<<<<<< HEAD
 	ColorPicker cp;
+=======
+    ColorPicker cp;
+>>>>>>> Matt
 
-    public Color colorCorners, colorStraights, colorDoors, colorJunctions;
+    public Color colorCorners, colorStraights, colorDoors, colorJunctions, colorTraps;
 
     public List<GameObject> listCorners = new List<GameObject>();
     public List<GameObject> listStraights = new List<GameObject>();
     public List<GameObject> listDoors = new List<GameObject>();
     public List<GameObject> listJunctions = new List<GameObject>();
+    public List<GameObject> listTraps = new List<GameObject>();
 
-    public enum Showing { corners, straights, doors, junctions };
+    public enum Showing { corners, straights, doors, junctions, traps };
     Showing whatsShowing;
 
     Showing previousSurface;
 
+    bool isPersistant = false;
+
 	// Use this for initialization
 	void Start () 
     {
+<<<<<<< HEAD
 		cp = GameObject.Find("ColorPicker").GetComponent<ColorPicker>();
+=======
+        cp = GameObject.Find("ColorPicker").GetComponent<ColorPicker>();
+
+>>>>>>> Matt
         colorCorners = cp.Picker();
         colorStraights = cp.Picker();
         colorDoors = cp.Picker();
         colorJunctions = cp.Picker();
+        colorTraps = cp.Picker();
 	}
 
     public void NewObject(GameObject passedObject, Showing passedShowing)
@@ -61,6 +74,11 @@ public class PartManager : MonoBehaviour
 
             listJunctions.Add(passedObject);
         }
+        else if (passedShowing == Showing.traps)
+        {
+            passedObject.GetComponent<Renderer>().material.color = colorTraps;
+            passedObject.GetComponent<Renderer>().material.SetColor("_Emission", colorTraps);
+        }
     }
 
     void NewSurface(Showing passedShow)
@@ -85,9 +103,15 @@ public class PartManager : MonoBehaviour
             previousSurface = whatsShowing;
             whatsShowing = Showing.junctions;
         }
+        else if (passedShow == Showing.traps)
+        {
+            previousSurface = whatsShowing;
+            whatsShowing = Showing.traps;
+        }
 
         UpdateSurface();
     }
+
 
     void UpdateSurface()
     {
@@ -107,30 +131,35 @@ public class PartManager : MonoBehaviour
         {
             ResetJunctions();
         }
+        else if (previousSurface == Showing.traps)
+        {
+            ResetTraps();
+        }
 
-        if (whatsShowing == Showing.corners)
+        if (isPersistant == false)
         {
-            UpdateCorners();
-        }
-        else if (whatsShowing == Showing.straights)
-        {
-            UpdateStraights();
-        }
-        else if (whatsShowing == Showing.doors)
-        {
-            UpdateDoors();
-        }
-        else if (whatsShowing == Showing.junctions)
-        {
-            UpdateJunctions();
+            if (whatsShowing == Showing.corners)
+            {
+                UpdateCorners();
+            }
+            else if (whatsShowing == Showing.straights)
+            {
+                UpdateStraights();
+            }
+            else if (whatsShowing == Showing.doors)
+            {
+                UpdateDoors();
+            }
+            else if (whatsShowing == Showing.junctions)
+            {
+                UpdateJunctions();
+            }
+            else if (whatsShowing == Showing.traps)
+            {
+                UpdateTraps();
+            }
         }
     }
-	
-	// Update is called once per frame
-	void Update () 
-    {
-
-	}
 
     void UpdateCorners()
     {
@@ -164,6 +193,14 @@ public class PartManager : MonoBehaviour
         }
     }
 
+    void UpdateTraps()
+    {
+        foreach (GameObject go in listTraps)
+        {
+            go.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+        }
+    }
+
 
     void ResetCorners()
     {
@@ -192,6 +229,14 @@ public class PartManager : MonoBehaviour
     void ResetJunctions()
     {
         foreach (GameObject go in listJunctions)
+        {
+            go.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+        }
+    }
+
+    void ResetTraps()
+    {
+        foreach (GameObject go in listTraps)
         {
             go.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
         }
