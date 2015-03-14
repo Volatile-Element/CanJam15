@@ -33,11 +33,11 @@ public class CharControler : MonoBehaviour {
 
         if (Input.GetAxis("Horizontal") > 0)
         {
-            gameObject.transform.Rotate(Vector3.up, -rotSpeed); 
+            gameObject.transform.Rotate(Vector3.up, rotSpeed); 
         }
         else if (Input.GetAxis("Horizontal") < 0)
         {
-            gameObject.transform.Rotate(Vector3.up, rotSpeed);
+            gameObject.transform.Rotate(Vector3.up, -rotSpeed);
         }
     }
 }
