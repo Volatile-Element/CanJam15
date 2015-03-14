@@ -3,19 +3,25 @@ using System.Collections;
 
 public class CornerPickup : PickupAbstract
 {
+	void start()
+	{
+		Debug.Log ("check");
+		ChangeColor ();
+        gameObject.GetComponentInChildren<Renderer>().material.color = partManager.colorCorners;
+	}
 
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.collider.name == "Player") 
 		{
-			Color testColor = new Color (0, 0, 100, 1);
-			ChangeColor (testColor);
-			//destroyObject ();
+			Triggers();
+			destroyObject ();
 		}
 	}
 	public override void Triggers()
 	{
-		Debug.Log ("Reached");
+		Debug.Log ("Ok");
+		partManager.NewSurface(PartManager.Showing.corners);
 	}
 
 }

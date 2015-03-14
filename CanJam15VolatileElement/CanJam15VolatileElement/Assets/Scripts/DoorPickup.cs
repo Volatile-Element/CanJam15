@@ -3,18 +3,23 @@ using System.Collections;
 
 public class DoorPickup : PickupAbstract
 {
+	void start()
+	{
+		Debug.Log ("check");
+		ChangeColor ();
+	}
 
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.collider.name == "Player") 
 		{
-			Color testColor = new Color (0, 100, 0, 1);
-			ChangeColor (testColor);
-			//destroyObject ();
+			Triggers();
+			destroyObject ();
 		}
 	}
 	public override void Triggers()
 	{
-		Debug.Log ("Reached");
+		Debug.Log ("Ok");
+		partManager.NewSurface(PartManager.Showing.doors);
 	}
 }

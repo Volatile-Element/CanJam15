@@ -12,7 +12,7 @@ public class ColorPicker : MonoBehaviour
 
     public Color Picker()
     {
-        Color temp = new Color(Random.Range(0.0f,1.1f), Random.Range(0.0f,1.1f), Random.Range(0.0f,1.1f), 1);
+        Color temp = new Color(Random.Range(0.0f,1.0f), Random.Range(0.0f,1.0f), Random.Range(0.0f,1.0f), 1);
         return temp;
     }
 	
