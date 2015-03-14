@@ -6,7 +6,6 @@ public class PartManager : MonoBehaviour
 {
 	ColorPicker cp;
 
-
     public Color colorCorners, colorStraights, colorDoors, colorJunctions, colorTraps;
 
     public List<GameObject> listCorners = new List<GameObject>();
@@ -16,9 +15,7 @@ public class PartManager : MonoBehaviour
     public List<GameObject> listTraps = new List<GameObject>();
 
     public enum Showing { corners, straights, doors, junctions, traps };
-    Showing whatsShowing;
-
-    Showing previousSurface;
+    Showing whatsShowing, previousSurface;
 
     bool isPersistant = false;
 
@@ -36,70 +33,48 @@ public class PartManager : MonoBehaviour
 
     public void NewObject(GameObject passedObject, Showing passedShowing)
     {
-        
-
         if (passedShowing == Showing.corners)
         {
-            passedObject.GetComponent<Renderer>().material.color = colorCorners;
-            passedObject.GetComponent<Renderer>().material.SetColor("_Emission", colorCorners);
+            ColorChange(colorJunctions, passedCorners);
 
             listCorners.Add(passedObject);
         }
         else if (passedShowing == Showing.straights)
         {
-            passedObject.GetComponent<Renderer>().material.color = colorStraights;
-            passedObject.GetComponent<Renderer>().material.SetColor("_Emission", colorStraights);
+            ColorChange(colorStraights, passedObject);
 
             listStraights.Add(passedObject);
         }
         else if (passedShowing == Showing.doors)
         {
-            passedObject.GetComponent<Renderer>().material.color = colorDoors;
-            passedObject.GetComponent<Renderer>().material.SetColor("_Emission", colorDoors);
+            ColorChange(colorDoors, passedObject);
 
             listDoors.Add(passedObject);
         }
         else if (passedShowing == Showing.junctions)
         {
-            passedObject.GetComponent<Renderer>().material.color = colorJunctions;
-            passedObject.GetComponent<Renderer>().material.SetColor("_Emission", colorJunctions);
+            ColorChange(colorJunctions, passedObject);
 
             listJunctions.Add(passedObject);
         }
         else if (passedShowing == Showing.traps)
         {
-            passedObject.GetComponent<Renderer>().material.color = colorTraps;
-            passedObject.GetComponent<Renderer>().material.SetColor("_Emission", colorTraps);
+            ColorChange(colorTraps, passedObject);
+
+            listTraps.Add(passedObject);
         }
     }
 
-    void NewSurface(Showing passedShow)
+    void ColorChange(Color temp, GameObject passedObject)
     {
-        if (passedShow == Showing.corners)
-        {
-            previousSurface = whatsShowing;
-            whatsShowing = Showing.corners;
-        }
-        else if (passedShow == Showing.straights)
-        {
-            previousSurface = whatsShowing;
-            whatsShowing = Showing.straights;
-        }
-        else if (passedShow == Showing.doors)
-        {
-            previousSurface = whatsShowing;
-            whatsShowing = Showing.doors;
-        }
-        else if (passedShow == Showing.junctions)
-        {
-            previousSurface = whatsShowing;
-            whatsShowing = Showing.junctions;
-        }
-        else if (passedShow == Showing.traps)
-        {
-            previousSurface = whatsShowing;
-            whatsShowing = Showing.traps;
-        }
+        passedObject.GetComponent<Renderer>().material.color = temp;
+        passedObject.GetComponent<Renderer>().material.SetColor("_Emission", temp);
+    }
+
+    public void NewSurface(Showing passedShow)
+    {
+        previousSurface = whatsShowing;
+        whatsShowing = passedShow;
 
         UpdateSurface();
     }
