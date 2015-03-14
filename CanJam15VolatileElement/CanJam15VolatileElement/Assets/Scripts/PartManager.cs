@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class PartManager : MonoBehaviour 
 {
 
-    ColorPicker cp = GameObject.Find("ColorPicker").GetComponent<ColorPicker>();
+    ColorPicker cp;
 
     public Color colorCorners, colorStraights, colorDoors, colorJunctions, colorTraps;
 
@@ -20,9 +20,13 @@ public class PartManager : MonoBehaviour
 
     Showing previousSurface;
 
+    bool isPersistant = false;
+
 	// Use this for initialization
 	void Start () 
     {
+        cp = GameObject.Find("ColorPicker").GetComponent<ColorPicker>();
+
         colorCorners = cp.Picker();
         colorStraights = cp.Picker();
         colorDoors = cp.Picker();
@@ -124,25 +128,28 @@ public class PartManager : MonoBehaviour
             ResetTraps();
         }
 
-        if (whatsShowing == Showing.corners)
+        if (isPersistant == false)
         {
-            UpdateCorners();
-        }
-        else if (whatsShowing == Showing.straights)
-        {
-            UpdateStraights();
-        }
-        else if (whatsShowing == Showing.doors)
-        {
-            UpdateDoors();
-        }
-        else if (whatsShowing == Showing.junctions)
-        {
-            UpdateJunctions();
-        }
-        else if (whatsShowing == Showing.traps)
-        {
-            UpdateTraps();
+            if (whatsShowing == Showing.corners)
+            {
+                UpdateCorners();
+            }
+            else if (whatsShowing == Showing.straights)
+            {
+                UpdateStraights();
+            }
+            else if (whatsShowing == Showing.doors)
+            {
+                UpdateDoors();
+            }
+            else if (whatsShowing == Showing.junctions)
+            {
+                UpdateJunctions();
+            }
+            else if (whatsShowing == Showing.traps)
+            {
+                UpdateTraps();
+            }
         }
     }
 
