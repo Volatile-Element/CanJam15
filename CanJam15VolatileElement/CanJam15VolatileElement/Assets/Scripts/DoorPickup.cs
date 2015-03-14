@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DoorPickup : PickupAbstract
 {
-	void start()
+	void Start()
 	{
 		Debug.Log ("check");
 		ChangeColor ();

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class StraightPickup : PickupAbstract
 {
-	void start()
+	void Start()
 	{
 		Debug.Log ("check");
 		ChangeColor ();

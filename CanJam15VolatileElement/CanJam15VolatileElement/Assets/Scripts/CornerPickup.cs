@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CornerPickup : PickupAbstract
 {
-	void start()
+	void Start()
 	{
 		Debug.Log ("check");
 		ChangeColor ();

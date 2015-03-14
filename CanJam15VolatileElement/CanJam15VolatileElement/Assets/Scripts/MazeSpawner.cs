@@ -27,6 +27,8 @@ public class MazeSpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		partManager = FindObjectOfType<PartManager> ();
+
         //int height = 46;
         //int width = 46;
         //int seed = Random.seed;
