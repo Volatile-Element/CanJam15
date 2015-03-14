@@ -4,12 +4,8 @@ using System.Collections.Generic;
 
 public class PartManager : MonoBehaviour 
 {
-
-<<<<<<< HEAD
 	ColorPicker cp;
-=======
-    ColorPicker cp;
->>>>>>> Matt
+
 
     public Color colorCorners, colorStraights, colorDoors, colorJunctions, colorTraps;
 
@@ -29,12 +25,8 @@ public class PartManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-<<<<<<< HEAD
 		cp = GameObject.Find("ColorPicker").GetComponent<ColorPicker>();
-=======
-        cp = GameObject.Find("ColorPicker").GetComponent<ColorPicker>();
-
->>>>>>> Matt
+		
         colorCorners = cp.Picker();
         colorStraights = cp.Picker();
         colorDoors = cp.Picker();
