@@ -3,35 +3,38 @@ using System.Collections;
 
 public class MazeSpawner : MonoBehaviour
 {
-    public GameObject straight;
-    public GameObject flickerLight;
-    public GameObject wallPickup;
-    public GameObject cornerPickup;
-    public GameObject startPoint;
+	
+	public GameObject straight;
+	public GameObject flickerLight;
+	public GameObject wallPickup;
+	public GameObject cornerPickup;
+	public GameObject boostPickup;
+	public GameObject startPoint;
 	public GameObject lightBeamPickup;
-    public GameObject endPoint;
-    public GameObject player;
+	public GameObject endPoint;
+	public GameObject player;
 	public GameObject laserTrap;
-
+	
 	public Material straightMaterial;
 	public Material cornerMaterial;
-
-    public PartManager partManager;
-    public GameManager gameManager;
-
-    int[,] mazeBase;
-
-    public int wallPickupLimit;
-    public int cornerPickupLimit;
-    public int flickeringLightLimit;
+	
+	public PartManager partManager;
+	public GameManager gameManager;
+	
+	int[,] mazeBase;
+	
+	public int wallPickupLimit;
+	public int cornerPickupLimit;
+	public int flickeringLightLimit;
 	public int laserTrapLimit;
 	public int lightBeamPickupLimit;
-    public int height;
-    public int width;
-    int seed;
-
-    bool hasStart;
-    bool hasEnd;
+	public int boostPickupLimit;
+	public int height;
+	public int width;
+	int seed;
+	
+	bool hasStart;
+	bool hasEnd;
 
     // Use this for initialization
     void Start()
@@ -133,6 +136,14 @@ public class MazeSpawner : MonoBehaviour
 						spawnedWall = (GameObject)Instantiate(laserTrap, new Vector3(x, 0.5f, y), Quaternion.identity);
 						spawnedWall.name = "Laser Trap";
 						laserTrapLimit--;
+						spawnedWall.transform.parent = gameObject.transform;
+						continue;
+					}
+					else if (Random.Range(0, 1000) > 990 && boostPickupLimit > 0)
+					{
+						spawnedWall = (GameObject)Instantiate(boostPickup, new Vector3(x, 0.5f, y), Quaternion.identity);
+						spawnedWall.name = "Boost Pickup";
+						boostPickupLimit--;
 						spawnedWall.transform.parent = gameObject.transform;
 						continue;
 					}
