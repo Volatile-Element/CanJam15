@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour {
         if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Decend"))
         {
             scoreManager.stopScore();
+            gameStarted = false;
         }
         else if(!gameStarted)
         {
@@ -47,8 +48,12 @@ public class GameManager : MonoBehaviour {
 
     public void StartGame()
     {
-        scoreManager.stopScore();
-
         playerAnimator.Play("Decend");
+    }
+
+    public void QuitToMenu()
+    {
+        PlayerPrefs.SetInt("ThisGame", (int)scoreManager.score);
+
     }
 }

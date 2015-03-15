@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour
     {
         holdingTime = System.DateTime.Now;
 
-        if (holdingTime.CompareTo(theTimeSecond).ToString() == "1" && updateScore || holdingTime.CompareTo(theTimeSecond).ToString() == "0" && updateScore)
+        if (holdingTime.CompareTo(theTimeSecond).ToString() == "1" && updateScore|| holdingTime.CompareTo(theTimeSecond).ToString() == "0" && updateScore)
         {
             score += 1;
             theTimeSecond = holdingTime.AddSeconds(1);
