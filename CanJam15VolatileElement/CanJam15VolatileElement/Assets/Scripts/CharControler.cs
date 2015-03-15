@@ -5,13 +5,18 @@ public class CharControler : MonoBehaviour {
 
     //CharacterController characterController;
     public float speed, rotSpeed;
+    float previousSpeed;
     Rigidbody rb;
+
+    bool test = true;
 
 	// Use this for initialization
 	void Start () {
 
         //characterController = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
+
+        previousSpeed = speed;
 	}
 	
 	// Update is called once per frame
@@ -39,5 +44,17 @@ public class CharControler : MonoBehaviour {
         {
             gameObject.transform.Rotate(Vector3.up, -rotSpeed);
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(3.0f);
+
+        speed = previousSpeed;
+    }
+
+    public void methodName()
+    {
+        StartCoroutine(Wait());
     }
 }
