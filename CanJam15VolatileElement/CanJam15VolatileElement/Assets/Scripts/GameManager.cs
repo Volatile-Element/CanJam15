@@ -9,11 +9,15 @@ public class GameManager : MonoBehaviour {
     public Canvas endGameCanvas;
     public Animator playerAnimator;
     public ScoreManager scoreManager;
+    public PartManager partManager;
+
+    bool gameStarted = false;
 
 	// Use this for initialization
 	void Awake () {
         seed = Random.seed;
         scoreManager = FindObjectOfType<ScoreManager>();
+        partManager = FindObjectOfType<PartManager>();
 	}
 	
 	// Update is called once per frame
@@ -23,9 +27,10 @@ public class GameManager : MonoBehaviour {
         {
             scoreManager.stopScore();
         }
-        else
+        else if(!gameStarted)
         {
             scoreManager.startScore();
+            gameStarted = true;
         }
 	
 	}
@@ -43,6 +48,7 @@ public class GameManager : MonoBehaviour {
     public void StartGame()
     {
         scoreManager.stopScore();
+
         playerAnimator.Play("Decend");
     }
 }
