@@ -20,9 +20,9 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 Platform assembly: C:\Users\computing\Documents\GitHub\CanJam15\CanJam15VolatileElement\CanJam15VolatileElement\Build\build1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\computing\Documents\GitHub\CanJam15\CanJam15VolatileElement\CanJam15VolatileElement\Build\build1_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: f68 -> priority: 1 
+  Thread -> id: 1640 -> priority: 1 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.676467 ms
+UnloadTime: 2.880362 ms
 check
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
@@ -36,6 +36,10 @@ check
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2129.
-Total: 0.564541 ms (FindLiveObjects: 0.082879 ms CreateObjectMapping: 0.037235 ms MarkObjects: 0.432715 ms  DeleteObjects: 0.011410 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1974.
+Total: 0.606882 ms (FindLiveObjects: 0.081378 ms CreateObjectMapping: 0.080477 ms MarkObjects: 0.432715 ms  DeleteObjects: 0.012011 ms)
+
+Ok
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 

@@ -64,6 +64,18 @@ public class GameManager : MonoBehaviour {
     public void QuitToMenu()
     {
         PlayerPrefs.SetInt("ThisGame", (int)scoreManager.score);
+        Application.LoadLevel("Main Menu");
 
+    }
+
+    public void Restart()
+    {
+        Application.LoadLevel("Main");
+    }
+
+    public void NewGame()
+    {
+        PlayerPrefs.SetInt("Seed", Random.Range(0, 9999));
+        Application.LoadLevel("Main");
     }
 }

@@ -208,25 +208,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11490096, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1021862720}
+    - target: {fileID: 11432242, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1021862720}
     - target: {fileID: 11431834, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1021862718}
+      objectReference: {fileID: 1021862720}
     - target: {fileID: 185516, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 11438448, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
-      propertyPath: speed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 9581042, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
-      propertyPath: m_UpdateMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9581042, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
-      propertyPath: m_CullingMode
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
@@ -263,51 +259,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 185516, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
   m_PrefabInternal: {fileID: 331681149}
---- !u!96 &518630102
-TrailRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 518630097}
-  m_Enabled: 1
-  m_CastShadows: 3
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Time: 9.99999985e+30
-  m_StartWidth: .200000003
-  m_EndWidth: .200000003
-  m_Colors:
-    m_Color[0]:
-      serializedVersion: 2
-      rgba: 4294967295
-    m_Color[1]:
-      serializedVersion: 2
-      rgba: 4294967295
-    m_Color[2]:
-      serializedVersion: 2
-      rgba: 4294967295
-    m_Color[3]:
-      serializedVersion: 2
-      rgba: 4294967295
-    m_Color[4]:
-      serializedVersion: 2
-      rgba: 16777215
-  m_MinVertexDistance: .100000001
-  m_Autodestruct: 0
 --- !u!1 &608950954
 GameObject:
   m_ObjectHideFlags: 0
