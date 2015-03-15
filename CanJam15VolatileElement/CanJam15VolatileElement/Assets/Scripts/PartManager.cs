@@ -14,10 +14,13 @@ public class PartManager : MonoBehaviour
     public List<GameObject> listJunctions = new List<GameObject>();
     public List<GameObject> listTraps = new List<GameObject>();
 
+    public List<GameObject> listAll = new List<GameObject>();
+
     public enum Showing { corners, straights, doors, junctions, traps };
     Showing whatsShowing, previousSurface;
 
     bool isPersistant = false;
+    bool isShowing = false;
 
 	// Use this for initialization
 	void Awake () 
@@ -30,6 +33,47 @@ public class PartManager : MonoBehaviour
         colorJunctions = cp.Picker();
         colorTraps = cp.Picker();
 	}
+
+    void Update()
+    {
+        if (Input.GetKeyDown("p"))
+        {
+            StartCoroutine(Wait());
+
+            isShowing = true;
+        }
+
+        if (Input.GetKeyDown("l"))
+        {
+            if (isShowing == false)
+            {
+                foreach (GameObject go in listAll)
+                {
+                    go.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                }
+
+                isShowing = true;
+            }
+            else if (isShowing == true)
+            {
+                foreach (GameObject go in listAll)
+                {
+                    go.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                }
+
+                isShowing = false;
+            }
+        }
+    }
+
+    IEnumerator Wait()
+    {
+        foreach (GameObject go in listAll)
+        {
+            go.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
 
     public void NewObject(GameObject passedObject, Showing passedShowing)
     {

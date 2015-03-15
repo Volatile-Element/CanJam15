@@ -62,6 +62,7 @@ public class MazeSpawner : MonoBehaviour
                         spawnedWall.GetComponent<Renderer>().material.color = partManager.colorCorners;
                         spawnedWall.name = "Corner";
                         partManager.listCorners.Add(spawnedWall);
+                        partManager.listAll.Add(spawnedWall);
                         spawnedWall.transform.parent = gameObject.transform;
                     }
                     else if (mazeBase[x, y] == 3)
@@ -69,6 +70,7 @@ public class MazeSpawner : MonoBehaviour
                         spawnedWall.GetComponent<Renderer>().material.color = partManager.colorStraights;
                         spawnedWall.name = "Straight";
                         partManager.listStraights.Add(spawnedWall);
+                        partManager.listAll.Add(spawnedWall);
                         spawnedWall.transform.parent = gameObject.transform;
                     }
                 }
