@@ -52,7 +52,9 @@
      <Compile Include="Assets\Scripts\CornerPickup.cs" />
      <Compile Include="Assets\Scripts\DoorPickup.cs" />
      <Compile Include="Assets\Scripts\EndGame.cs" />
+     <Compile Include="Assets\Scripts\GUI Managers\GUIM_MainMenu.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\LightBeamPickup.cs" />
      <Compile Include="Assets\Scripts\MazeGenerator.cs" />
      <Compile Include="Assets\Scripts\MazePiece.cs" />
      <Compile Include="Assets\Scripts\MazeSpawner.cs" />

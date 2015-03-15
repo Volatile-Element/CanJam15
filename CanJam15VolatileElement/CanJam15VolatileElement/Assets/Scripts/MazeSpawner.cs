@@ -11,6 +11,7 @@ public class MazeSpawner : MonoBehaviour
 	public GameObject lightBeamPickup;
     public GameObject endPoint;
     public GameObject player;
+	public GameObject laserTrap;
 
 	public Material straightMaterial;
 	public Material cornerMaterial;
@@ -23,6 +24,7 @@ public class MazeSpawner : MonoBehaviour
     public int wallPickupLimit;
     public int cornerPickupLimit;
     public int flickeringLightLimit;
+	public int laserTrapLimit;
 	public int lightBeamPickupLimit;
     public int height;
     public int width;
@@ -123,6 +125,14 @@ public class MazeSpawner : MonoBehaviour
 						spawnedWall = (GameObject)Instantiate(lightBeamPickup, new Vector3(x, 0.5f, y), Quaternion.identity);
 						spawnedWall.name = "Light Beam Pickup";
 						lightBeamPickupLimit--;
+						spawnedWall.transform.parent = gameObject.transform;
+						continue;
+					}
+					else if (Random.Range(0, 1000) > 990 && laserTrapLimit > 0)
+					{
+						spawnedWall = (GameObject)Instantiate(laserTrap, new Vector3(x, 0.5f, y), Quaternion.identity);
+						spawnedWall.name = "Laser Trap";
+						laserTrapLimit--;
 						spawnedWall.transform.parent = gameObject.transform;
 						continue;
 					}

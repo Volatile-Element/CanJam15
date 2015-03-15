@@ -1,13 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CornerPickup.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Trap.cs">
     <Files>
-      <File FileName="Assets\Scripts\TracePickup.cs" Line="11" Column="5" />
-      <File FileName="Assets\Scripts\PartManager.cs" Line="65" Column="1" />
-      <File FileName="Assets\Scripts\StraightPickup.cs" Line="17" Column="2" />
-      <File FileName="Assets\Scripts\CornerPickup.cs" Line="15" Column="33" />
-      <File FileName="Assets\Scripts\DoorPickup.cs" Line="12" Column="28" />
-      <File FileName="Assets\Scripts\PickupAbstract.cs" Line="7" Column="33" />
+      <File FileName="Assets\Scripts\Trap.cs" Line="36" Column="26" />
+      <File FileName="Assets\Scripts\MazeSpawner.cs" Line="170" Column="1" />
+      <File FileName="Assets\Scripts\TracePickup.cs" Line="32" Column="1" />
+      <File FileName="Assets\Scripts\PartManager.cs" Line="291" Column="1" />
+      <File FileName="Assets\Scripts\StraightPickup.cs" Line="29" Column="1" />
+      <File FileName="Assets\Scripts\CornerPickup.cs" Line="28" Column="1" />
+      <File FileName="Assets\Scripts\DoorPickup.cs" Line="26" Column="1" />
+      <File FileName="Assets\Scripts\PickupAbstract.cs" Line="28" Column="1" />
+      <File FileName="Assets\Scripts\ScoreManager.cs" Line="45" Column="15" />
+      <File FileName="Assets\Scripts\MazeGenerator.cs" Line="562" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="70" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
