@@ -317,6 +317,7 @@ MonoBehaviour:
   endGameCanvas: {fileID: 1124739258}
   playerAnimator: {fileID: 1700005100}
   scoreManager: {fileID: 0}
+  partManager: {fileID: 0}
 --- !u!1 &1116202735
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +433,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495244, guid: f63a7c1dd93972d46951cc0d25cd029e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .707106829
+      value: .70710659
       objectReference: {fileID: 0}
     - target: {fileID: 495244, guid: f63a7c1dd93972d46951cc0d25cd029e, type: 2}
       propertyPath: m_LocalRotation.z
@@ -440,7 +441,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495244, guid: f63a7c1dd93972d46951cc0d25cd029e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106709
+      value: -.707106948
       objectReference: {fileID: 0}
     - target: {fileID: 495244, guid: f63a7c1dd93972d46951cc0d25cd029e, type: 2}
       propertyPath: m_RootOrder
@@ -448,11 +449,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 497168, guid: f63a7c1dd93972d46951cc0d25cd029e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .70710659
+      value: .707106829
       objectReference: {fileID: 0}
     - target: {fileID: 497168, guid: f63a7c1dd93972d46951cc0d25cd029e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.707106948
+      value: .707106709
       objectReference: {fileID: 0}
     - target: {fileID: 497168, guid: f63a7c1dd93972d46951cc0d25cd029e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -631,6 +632,7 @@ MonoBehaviour:
   listDoors: []
   listJunctions: []
   listTraps: []
+  listAll: []
 --- !u!4 &1744033826
 Transform:
   m_ObjectHideFlags: 0
