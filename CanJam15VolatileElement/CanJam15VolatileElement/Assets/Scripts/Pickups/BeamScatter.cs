@@ -11,7 +11,7 @@ public class BeamScatter : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-
+		orbsToThrow = Resources.Load<GameObject> ("Prefabs/Beam Orb") as GameObject;
 	}
 	
 	// Update is called once per frame
@@ -27,8 +27,11 @@ public class BeamScatter : MonoBehaviour
 
 		for (int i = 0; i < amount; i++)
 		{
-			GameObject orb = (GameObject)Instantiate(orbsToThrow, transform.position, Quaternion.identity);
-			orb.GetComponent<Rigidbody>().AddForce (transform.forward * 150);
+			Transform spawn = transform.Find ("Spawn for Player Objects").transform;
+
+			GameObject orb = (GameObject)Instantiate(orbsToThrow, new Vector3(spawn.position.x, spawn.position.y, spawn.position.z), Quaternion.identity);
+
+			orb.GetComponent<Rigidbody>().AddForce (-spawn.forward * 50);
 		}
 
 		if (uses > maxUses)

@@ -8,8 +8,12 @@ public class MazeSpawner : MonoBehaviour
     public GameObject wallPickup;
     public GameObject cornerPickup;
     public GameObject startPoint;
+	public GameObject lightBeamPickup;
     public GameObject endPoint;
     public GameObject player;
+
+	public Material straightMaterial;
+	public Material cornerMaterial;
 
     public PartManager partManager;
     public GameManager gameManager;
@@ -19,6 +23,7 @@ public class MazeSpawner : MonoBehaviour
     public int wallPickupLimit;
     public int cornerPickupLimit;
     public int flickeringLightLimit;
+	public int lightBeamPickupLimit;
     public int height;
     public int width;
     int seed;
@@ -53,12 +58,14 @@ public class MazeSpawner : MonoBehaviour
 
                     if (mazeBase[x, y] == 1)
                     {
+						spawnedWall.GetComponent<Renderer>().material = straightMaterial;
                         partManager.listStraights.Add(spawnedWall);
                         spawnedWall.GetComponent<Renderer>().material.color = partManager.colorStraights;
                         spawnedWall.transform.parent = gameObject.transform;
                     }
                     else if (mazeBase[x, y] == 2)
                     {
+						spawnedWall.GetComponent<Renderer>().material = cornerMaterial;
                         spawnedWall.GetComponent<Renderer>().material.color = partManager.colorCorners;
                         spawnedWall.name = "Corner";
                         partManager.listCorners.Add(spawnedWall);
@@ -109,6 +116,14 @@ public class MazeSpawner : MonoBehaviour
                         spawnedWall.transform.parent = gameObject.transform;
                         continue;
                     }
+					else if (Random.Range(0, 1000) > 990 && lightBeamPickupLimit > 0)
+					{
+						spawnedWall = (GameObject)Instantiate(lightBeamPickup, new Vector3(x, 0.5f, y), Quaternion.identity);
+						spawnedWall.name = "Light Beam Pickup";
+						lightBeamPickupLimit--;
+						spawnedWall.transform.parent = gameObject.transform;
+						continue;
+					}
                 }
 
 

@@ -34,7 +34,7 @@ public class BeamOrb : MonoBehaviour
 
 		rigidBody.velocity = Vector3.zero;
 
-		rigidBody.AddForce (RandomiseBounce () + -contact * 150f);
+		rigidBody.AddForce (RandomiseBounce () + -contact * 50);
 	}
 
 	private Vector3 RandomiseBounce()
@@ -49,6 +49,8 @@ public class BeamOrb : MonoBehaviour
 		{
 			Bounce (contact.point);
 		}
+
+		//Debug.Log ("Collide " + collision.gameObject.name);
 	}
 
 	/// <summary>
