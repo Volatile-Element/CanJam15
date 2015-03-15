@@ -12,8 +12,9 @@ public abstract class PickupAbstract : MonoBehaviour
 	}
 	public void ChangeColor()
 	{
-//		Color randColor = colorPicker.Picker ();
-//		gameObject.GetComponentInChildren<Light> ().color = randColor;
+		Color randColor = colorPicker.Picker ();
+		gameObject.GetComponentInChildren<Light> ().color = randColor;
+        gameObject.GetComponentInChildren<Renderer>().material.color = randColor;
 //		Debug.Log (randColor.ToString ());
 	}
 

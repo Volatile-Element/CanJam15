@@ -6,7 +6,7 @@ public class LightBeamPickup : PickupAbstract
 	// Use this for initialization
 	void Start ()
 	{
-		
+        ChangeColor();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +20,7 @@ public class LightBeamPickup : PickupAbstract
 		if (collision.collider.name == "Player") 
 		{
 			collision.gameObject.AddComponent<BeamScatter>();
+            Destroy(gameObject);
 		}
 	}
 

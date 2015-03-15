@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GUIM_PauseMenu : MonoBehaviour
 {
-	Canvas pauseMenuCanvas;
+	public Canvas pauseMenuCanvas;
 	int seed = 0;
 
 	// Use this for initialization
 	void Start ()
 	{
-		
+        seed = PlayerPrefs.GetInt("Seed");
+        pauseMenuCanvas.transform.Find("Text - Seed").GetComponent<Text>().text = "Seed: " + seed.ToString();
 	}
 	
 	// Update is called once per frame
@@ -50,11 +52,13 @@ public class GUIM_PauseMenu : MonoBehaviour
 
 	public void ReturnToMainMenu()
 	{
+        Time.timeScale = 1;
 		Application.LoadLevel ("Main Menu");
 	}
 
 	public void Quit()
 	{
+        Time.timeScale = 1;
 		Application.Quit ();
 	}
 }

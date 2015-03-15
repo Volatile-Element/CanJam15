@@ -11,6 +11,7 @@ public class MazeSpawner : MonoBehaviour
 	public GameObject boostPickup;
 	public GameObject startPoint;
 	public GameObject lightBeamPickup;
+    public GameObject teleporter;
 	public GameObject endPoint;
 	public GameObject player;
 	public GameObject laserTrap;
@@ -29,6 +30,7 @@ public class MazeSpawner : MonoBehaviour
 	public int laserTrapLimit;
 	public int lightBeamPickupLimit;
 	public int boostPickupLimit;
+    public int teleporterLimit;
 	public int height;
 	public int width;
 	int seed;
@@ -147,6 +149,14 @@ public class MazeSpawner : MonoBehaviour
 						spawnedWall.transform.parent = gameObject.transform;
 						continue;
 					}
+                    else if (Random.Range(0, 1000) > 900 && teleporterLimit > 0)
+                    {
+                        spawnedWall = (GameObject)Instantiate(teleporter, new Vector3(x, 0f, y), Quaternion.identity);
+                        spawnedWall.name = "Teleporter Platform";
+                        teleporterLimit--;
+                        spawnedWall.transform.parent = gameObject.transform;
+                        continue;
+                    }
                 }
 
 

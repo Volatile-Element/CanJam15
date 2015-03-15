@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
+    GUIM_PauseMenu guiPauseMenu;
 
     public Camera mainCamera;
     public int seed;
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour {
         //GameObject innerLight = (GameObject)Instantiate(light);
         scoreManager = FindObjectOfType<ScoreManager>();
         partManager = FindObjectOfType<PartManager>();
+        guiPauseMenu = FindObjectOfType<GUIM_PauseMenu>();
 	}
 	
 	// Update is called once per frame
@@ -38,7 +40,13 @@ public class GameManager : MonoBehaviour {
             gameStarted = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!guiPauseMenu.pauseMenuCanvas.enabled)
+                guiPauseMenu.Pause();
+            else
+                guiPauseMenu.Continue();
+        }
 	
 	}
 

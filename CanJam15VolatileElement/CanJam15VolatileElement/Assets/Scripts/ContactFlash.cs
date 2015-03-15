@@ -5,6 +5,9 @@ public class ContactFlash : MonoBehaviour {
 
     MeshRenderer mr;
 
+    UnityEngine.Rendering.ShadowCastingMode previous;
+    bool colliding = false;
+
 	// Use this for initialization
 	void Start () {
         mr = GetComponent<MeshRenderer>();
@@ -17,11 +20,17 @@ public class ContactFlash : MonoBehaviour {
 
     void OnCollisionEnter(Collision c)
     {
-        mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+        if (!colliding)
+        {
+            previous = mr.shadowCastingMode;
+            mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            colliding = true;
+        }
     }
 
     void OnCollisionExit(Collision c)
     {
-        mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+        mr.shadowCastingMode = previous;
+        colliding = false;
     }
 }
