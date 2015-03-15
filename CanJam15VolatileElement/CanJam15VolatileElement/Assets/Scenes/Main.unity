@@ -189,6 +189,48 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 129146, guid: f63a7c1dd93972d46951cc0d25cd029e, type: 2}
   m_PrefabInternal: {fileID: 923764656}
+--- !u!1001 &594145108
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 427696, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427696, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427696, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427696, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427696, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: .70710659
+      objectReference: {fileID: 0}
+    - target: {fileID: 427696, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427696, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -.707106948
+      objectReference: {fileID: 0}
+    - target: {fileID: 427696, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 687bee2e2c71def42a7af5f882ef0838, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &608950954
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +354,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 129146, guid: f63a7c1dd93972d46951cc0d25cd029e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f63a7c1dd93972d46951cc0d25cd029e, type: 2}
   m_IsPrefabParent: 0
@@ -356,6 +402,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   seed: 0
+  endGameCanvas: {fileID: 0}
+  playerAnimator: {fileID: 0}
+  scoreManager: {fileID: 0}
+  partManager: {fileID: 0}
 --- !u!1 &1116202735
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,13 +466,17 @@ MonoBehaviour:
   wallPickup: {fileID: 123372, guid: cd5178d813f15c2489645a6463870714, type: 2}
   cornerPickup: {fileID: 123372, guid: 9fa2ccc02c0e2e547b951bf7d14248d9, type: 2}
   startPoint: {fileID: 167450, guid: 5f4a482c0abeb874595c4282a8bcd360, type: 2}
+  lightBeamPickup: {fileID: 0}
   endPoint: {fileID: 197822, guid: 9bd673cde2dd8de41aae6c4fa970a36a, type: 2}
   player: {fileID: 518630097}
+  straightMaterial: {fileID: 0}
+  cornerMaterial: {fileID: 0}
   partManager: {fileID: 0}
   gameManager: {fileID: 0}
   wallPickupLimit: 2
   cornerPickupLimit: 2
   flickeringLightLimit: 20
+  lightBeamPickupLimit: 0
   height: 15
   width: 15
 --- !u!4 &1150386809
@@ -601,6 +655,7 @@ MonoBehaviour:
   listDoors: []
   listJunctions: []
   listTraps: []
+  listAll: []
 --- !u!4 &1744033826
 Transform:
   m_ObjectHideFlags: 0

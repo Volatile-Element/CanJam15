@@ -53,7 +53,8 @@ public class GUIM_MainMenu : MonoBehaviour
 		PlayerPrefs.SetInt ("Height", height);
 		PlayerPrefs.SetInt ("Seed", seed);
 
-		Application.LoadLevel ("Main");
+        Application.LoadLevelAsync("Ash Main");
+		//Application.LoadLevel ("Ash Main");
 	}
 
 	public void ShowOptions()

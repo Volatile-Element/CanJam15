@@ -10,12 +10,14 @@ public class GameManager : MonoBehaviour {
     public Animator playerAnimator;
     public ScoreManager scoreManager;
     public PartManager partManager;
+    public GameObject light;
 
     bool gameStarted = false;
 
 	// Use this for initialization
 	void Awake () {
-        seed = Random.seed;
+        seed = PlayerPrefs.GetInt("Seed");
+        GameObject innerLight = (GameObject)Instantiate(light);
         scoreManager = FindObjectOfType<ScoreManager>();
         partManager = FindObjectOfType<PartManager>();
 	}

@@ -34,6 +34,8 @@ public class MazeSpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        height = PlayerPrefs.GetInt("Height");
+        width = PlayerPrefs.GetInt("Width");
         gameManager = FindObjectOfType<GameManager>();
 		partManager = FindObjectOfType<PartManager> ();
 

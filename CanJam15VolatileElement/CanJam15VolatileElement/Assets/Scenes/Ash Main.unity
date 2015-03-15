@@ -154,6 +154,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 168576, guid: 2afa92c2f5d49b344a40f0bf31362266, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2afa92c2f5d49b344a40f0bf31362266, type: 2}
   m_IsPrefabParent: 0
@@ -373,6 +377,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 933429155}
   scoreManager: {fileID: 1893958735}
   partManager: {fileID: 1744033825}
+  light: {fileID: 168576, guid: 2afa92c2f5d49b344a40f0bf31362266, type: 2}
 --- !u!1 &1116202735
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1813071192
 SphereCollider:
   m_ObjectHideFlags: 0
