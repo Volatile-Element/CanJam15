@@ -29,4 +29,10 @@ public class ScoreManager : MonoBehaviour
         }
 	
 	}
+
+	public void penalty()
+	{
+		score += 20;
+		Debug.Log (score);
+	}
 }
