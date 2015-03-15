@@ -6,6 +6,7 @@ public class ScoreManager : MonoBehaviour
     public double score;
 
     System.DateTime holdingTime, theTimeSecond;
+    bool updateScore = true;
 
 	// Use this for initialization
 	void Start () 
@@ -21,12 +22,21 @@ public class ScoreManager : MonoBehaviour
     {
         holdingTime = System.DateTime.Now;
 
-        if (holdingTime.CompareTo(theTimeSecond).ToString() == "1" || holdingTime.CompareTo(theTimeSecond).ToString() == "0")
+        if (holdingTime.CompareTo(theTimeSecond).ToString() == "1" && updateScore || holdingTime.CompareTo(theTimeSecond).ToString() == "0" && updateScore)
         {
             score += 1;
             theTimeSecond = holdingTime.AddSeconds(1);
-            Debug.Log(score);
         }
 	
 	}
+
+    public void stopScore()
+    {
+        updateScore = false;
+    }
+
+    public void startScore()
+    {
+        updateScore = true;
+    }
 }
