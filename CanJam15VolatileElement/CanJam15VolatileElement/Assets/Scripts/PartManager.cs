@@ -88,7 +88,7 @@ public class PartManager : MonoBehaviour
         foreach (GameObject go in listAll)
         {
             go.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.01f);
         }
     }
 
@@ -197,7 +197,7 @@ public class PartManager : MonoBehaviour
         }
     }
 
-    void UpdateCorners()
+    public void UpdateCorners()
     {
         foreach (GameObject go in listCorners)
         {
@@ -205,7 +205,7 @@ public class PartManager : MonoBehaviour
         }
     }
 
-    void UpdateStraights()
+    public void UpdateStraights()
     {
         foreach (GameObject go in listStraights)
         {
@@ -243,7 +243,7 @@ public class PartManager : MonoBehaviour
     }
 
 
-    void ResetCorners()
+    public void ResetCorners()
     {
         foreach (GameObject go in listCorners)
         {
@@ -251,7 +251,7 @@ public class PartManager : MonoBehaviour
         }
     }
 
-    void ResetStraights()
+    public void ResetStraights()
     {
         foreach (GameObject go in listStraights)
         {

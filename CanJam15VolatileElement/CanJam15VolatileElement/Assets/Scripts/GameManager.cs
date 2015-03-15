@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         seed = PlayerPrefs.GetInt("Seed");
-        GameObject innerLight = (GameObject)Instantiate(light);
+        //GameObject innerLight = (GameObject)Instantiate(light);
         scoreManager = FindObjectOfType<ScoreManager>();
         partManager = FindObjectOfType<PartManager>();
 	}
@@ -33,8 +33,12 @@ public class GameManager : MonoBehaviour {
         else if(!gameStarted)
         {
             scoreManager.startScore();
+            partManager.ResetCorners();
+            partManager.ResetStraights();
             gameStarted = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
 	
 	}
 
@@ -46,11 +50,13 @@ public class GameManager : MonoBehaviour {
     public void EndGame(double score)
     {
         endGameCanvas.enabled = true;
+        GameObject.Find("Player").GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
     }
 
     public void StartGame()
     {
         playerAnimator.Play("Decend");
+        partManager.RowShower();
     }
 
     public void QuitToMenu()

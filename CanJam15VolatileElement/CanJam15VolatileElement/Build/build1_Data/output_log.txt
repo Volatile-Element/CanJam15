@@ -1,0 +1,41 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 640  (ID=0xfc1)
+    Vendor:   NVIDIA
+    VRAM:     1990 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\computing\Documents\GitHub\CanJam15\CanJam15VolatileElement\CanJam15VolatileElement\Build\build1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\computing\Documents\GitHub\CanJam15\CanJam15VolatileElement\CanJam15VolatileElement\Build\build1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\computing\Documents\GitHub\CanJam15\CanJam15VolatileElement\CanJam15VolatileElement\Build\build1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\computing\Documents\GitHub\CanJam15\CanJam15VolatileElement\CanJam15VolatileElement\Build\build1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\computing\Documents\GitHub\CanJam15\CanJam15VolatileElement\CanJam15VolatileElement\Build\build1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\computing\Documents\GitHub\CanJam15\CanJam15VolatileElement\CanJam15VolatileElement\Build\build1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.108 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\computing\Documents\GitHub\CanJam15\CanJam15VolatileElement\CanJam15VolatileElement\Build\build1_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\computing\Documents\GitHub\CanJam15\CanJam15VolatileElement\CanJam15VolatileElement\Build\build1_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: f68 -> priority: 1 
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.676467 ms
+check
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+check
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+check
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2129.
+Total: 0.564541 ms (FindLiveObjects: 0.082879 ms CreateObjectMapping: 0.037235 ms MarkObjects: 0.432715 ms  DeleteObjects: 0.011410 ms)
+
