@@ -11,6 +11,7 @@ GameObject:
   - 95: {fileID: 9573446}
   - 135: {fileID: 13518044}
   - 114: {fileID: 11466296}
+  - 82: {fileID: 8270606}
   m_Layer: 0
   m_Name: TracePickup
   m_TagString: Untagged
@@ -121,6 +122,80 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194848}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &8270606
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119060}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4d04a0ab6dc361740992ba20f94a73cf, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 120
+  DopplerLevel: 5
+  MinDistance: 1.35359478
+  MaxDistance: 3.75584888
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1.00509262
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .666142344
+      value: .95323354
+      inSlope: -.147730127
+      outSlope: -.147730127
+      tangentMode: 0
+    - time: 1
+      value: .00509259291
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9573446
 Animator:
   serializedVersion: 3
@@ -181,8 +256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abf51a50e49414448ec22f800e980ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {fileID: 2100000, guid: 4fdeb4e8895bbce4496f6804ddc84ff8, type: 2}
   partManager: {fileID: 0}
+  colorPicker: {fileID: 0}
 --- !u!135 &13518044
 SphereCollider:
   m_ObjectHideFlags: 1

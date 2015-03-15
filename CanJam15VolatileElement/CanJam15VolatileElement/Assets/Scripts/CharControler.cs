@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CharControler : MonoBehaviour {
 
     //CharacterController characterController;
     public float speed, rotSpeed;
+    public Text alertText;
     float previousSpeed;
     Rigidbody rb;
 

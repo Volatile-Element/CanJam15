@@ -20,6 +20,7 @@ public class LightBeamPickup : PickupAbstract
 		if (collision.collider.name == "Player") 
 		{
 			collision.gameObject.AddComponent<BeamScatter>();
+            collision.gameObject.GetComponent<CharControler>().alertText.text = "Beam active - Space to fire";
             Destroy(gameObject);
 		}
 	}

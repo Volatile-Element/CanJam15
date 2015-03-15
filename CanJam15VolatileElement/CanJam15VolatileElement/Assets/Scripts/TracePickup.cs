@@ -19,6 +19,7 @@ public class TracePickup :PickupAbstract
 			play = collision.collider.gameObject;
             collision.collider.GetComponent<TrailRenderer>().material.color = randColor;
             partManager.NewSurface(PartManager.Showing.trail);
+            collision.gameObject.GetComponent<CharControler>().alertText.text = "Trace - M to activate";
 			//collision.collider.GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
 			Destroy(gameObject);
 		}

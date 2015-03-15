@@ -20,7 +20,7 @@ AnimatorController:
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_MultiThreadedStateMachine: 1
 --- !u!1101 &110156486
 AnimatorStateTransition:
@@ -83,7 +83,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: No Anims
+  m_Name: bounce
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -92,7 +92,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 90dab978c5d08c943a07238af1d9d545, type: 2}
   m_Tag: 
 --- !u!1107 &110769326
 AnimatorStateMachine:

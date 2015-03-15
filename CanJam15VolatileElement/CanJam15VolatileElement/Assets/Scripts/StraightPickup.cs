@@ -15,6 +15,7 @@ public class StraightPickup : PickupAbstract
 	{
 		if (collision.collider.name == "Player") 
 		{
+            collision.gameObject.GetComponent<CharControler>().alertText.text = "Walls Active";
 			Triggers();
 			destroyObject ();
 		}

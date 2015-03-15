@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour {
     {
         endGameCanvas.enabled = true;
         GameObject.Find("Player").GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+        GameObject.Find("AlertText").SetActive(false);
 		partManager.UpdateCorners ();
 		partManager.UpdateStraights ();
     }

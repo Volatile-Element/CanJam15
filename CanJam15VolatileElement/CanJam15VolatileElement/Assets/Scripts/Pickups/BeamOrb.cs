@@ -45,10 +45,7 @@ public class BeamOrb : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
 	{
-		foreach (ContactPoint contact in collision.contacts)
-		{
-			Bounce (contact.point);
-		}
+        Bounce(rigidBody.velocity);
 
 		//Debug.Log ("Collide " + collision.gameObject.name);
 	}

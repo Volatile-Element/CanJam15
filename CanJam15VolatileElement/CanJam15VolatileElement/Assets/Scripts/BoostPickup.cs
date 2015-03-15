@@ -24,6 +24,7 @@ public class BoostPickup : PickupAbstract
 
             collision.collider.GetComponent<CharControler>().methodName();
 
+            collision.gameObject.GetComponent<CharControler>().alertText.text = "Speed Boost";
             Debug.Log("Text");
 
             Destroy(gameObject);

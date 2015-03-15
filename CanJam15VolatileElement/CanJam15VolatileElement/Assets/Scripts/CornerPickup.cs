@@ -16,6 +16,7 @@ public class CornerPickup : PickupAbstract
 		if (collision.collider.name == "Player") 
 		{
 			Triggers();
+            collision.gameObject.GetComponent<CharControler>().alertText.text = "Corners Active";
 			destroyObject ();
 		}
 	}

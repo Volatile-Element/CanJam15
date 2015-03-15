@@ -3,11 +3,13 @@ using System.Collections;
 
 public class ColorPicker : MonoBehaviour 
 {
+    GameManager gameManager;
 
 	// Use this for initialization
 	void Start () 
     {
-	
+        gameManager = FindObjectOfType<GameManager>();
+        Random.seed = gameManager.seed;
 	}
 
     public Color Picker()

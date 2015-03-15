@@ -31,7 +31,7 @@ public class BeamScatter : MonoBehaviour
 
 			GameObject orb = (GameObject)Instantiate(orbsToThrow, new Vector3(spawn.position.x, spawn.position.y, spawn.position.z), Quaternion.identity);
 
-			orb.GetComponent<Rigidbody>().AddForce (-spawn.forward * 50);
+			orb.GetComponent<Rigidbody>().AddForce (new Vector3(-50, 0, 0));
 		}
 
 		if (uses > maxUses)
