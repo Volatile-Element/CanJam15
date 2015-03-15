@@ -39,4 +39,9 @@ public class ScoreManager : MonoBehaviour
     {
         updateScore = true;
     }
+
+	public void penalty()
+	{
+
+	}
 }
