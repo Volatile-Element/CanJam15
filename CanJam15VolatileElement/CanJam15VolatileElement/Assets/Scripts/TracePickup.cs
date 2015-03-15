@@ -17,8 +17,9 @@ public class TracePickup :PickupAbstract
 		{
 			Color randColor = colorPicker.Picker();
 			play = collision.collider.gameObject;
-			collision.collider.GetComponent<TrailRenderer>().material.color = randColor;
-			collision.collider.GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            collision.collider.GetComponent<TrailRenderer>().material.color = randColor;
+            partManager.NewSurface(PartManager.Showing.trail);
+			//collision.collider.GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
 			Destroy(gameObject);
 		}
 	}

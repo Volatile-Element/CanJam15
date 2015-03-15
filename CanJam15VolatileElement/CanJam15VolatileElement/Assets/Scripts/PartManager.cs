@@ -16,7 +16,7 @@ public class PartManager : MonoBehaviour
 
     public List<GameObject> listAll = new List<GameObject>();
 
-    public enum Showing { corners, straights, doors, junctions, traps };
+    public enum Showing { corners, straights, doors, junctions, traps, trail };
     Showing whatsShowing, previousSurface;
 
     bool isPersistant = false;
@@ -38,9 +38,7 @@ public class PartManager : MonoBehaviour
     {
         if (Input.GetKeyDown("p"))
         {
-            StartCoroutine(Wait());
-
-            isShowing = true;
+            RowShower();
         }
 
         if (Input.GetKeyDown("l"))
@@ -64,6 +62,25 @@ public class PartManager : MonoBehaviour
                 isShowing = false;
             }
         }
+
+        if (Input.GetKeyDown("m"))
+        {
+            if (GameObject.Find("Player").GetComponent<TrailRenderer>().shadowCastingMode == UnityEngine.Rendering.ShadowCastingMode.On)
+            {
+                GameObject.Find("Player").GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+            }
+            else if (GameObject.Find("Player").GetComponent<TrailRenderer>().shadowCastingMode == UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly)
+            {
+                GameObject.Find("Player").GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            }
+        }
+    }
+
+    public void RowShower()
+    {
+        StartCoroutine(Wait());
+
+        isShowing = true;
     }
 
     IEnumerator Wait()
@@ -146,6 +163,10 @@ public class PartManager : MonoBehaviour
         {
             ResetTraps();
         }
+        else if (previousSurface == Showing.trail)
+        {
+            ResetTrail();
+        }
 
         if (isPersistant == false)
         {
@@ -168,6 +189,10 @@ public class PartManager : MonoBehaviour
             else if (whatsShowing == Showing.traps)
             {
                 UpdateTraps();
+            }
+            else if (whatsShowing == Showing.trail)
+            {
+                UpdateTrail();
             }
         }
     }
@@ -212,6 +237,11 @@ public class PartManager : MonoBehaviour
         }
     }
 
+    void UpdateTrail()
+    {
+        GameObject.Find("Player").GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+    }
+
 
     void ResetCorners()
     {
@@ -251,5 +281,10 @@ public class PartManager : MonoBehaviour
         {
             go.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
         }
+    }
+
+    void ResetTrail()
+    {
+        GameObject.Find("Player").GetComponent<TrailRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
     }
 }
