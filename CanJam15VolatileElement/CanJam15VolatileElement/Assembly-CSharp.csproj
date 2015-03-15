@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\ContactFlash.cs" />
      <Compile Include="Assets\Scripts\CornerPickup.cs" />
      <Compile Include="Assets\Scripts\DoorPickup.cs" />
+     <Compile Include="Assets\Scripts\EndGame.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\MazeGenerator.cs" />
      <Compile Include="Assets\Scripts\MazePiece.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\Scripts\PickupAbstract.cs" />
      <Compile Include="Assets\Scripts\Pickups\BeamOrb.cs" />
      <Compile Include="Assets\Scripts\Pickups\BeamScatter.cs" />
+     <Compile Include="Assets\Scripts\ScoreDisplay.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\StraightPickup.cs" />
      <Compile Include="Assets\Scripts\TestPlayer.cs" />

@@ -145,6 +145,8 @@ public class MazeSpawner : MonoBehaviour
                 }
             }
         }
+
+        gameManager.StartGame();
     }
 
     // Update is called once per frame
